@@ -32,7 +32,7 @@ import io.ballerina.flowmodelgenerator.extension.response.OpenAPIClientGeneratio
 import io.ballerina.flowmodelgenerator.extension.response.OpenAPIGeneratedModulesResponse;
 import io.ballerina.tools.text.LSPTextEdit;
 import org.ballerinalang.annotation.JavaSPIService;
-import org.ballerinalang.langserver.common.utils.CommonUtil;
+import org.ballerinalang.langserver.common.utils.PositionUtil;
 import org.ballerinalang.langserver.commons.service.spi.ExtendedLanguageServerService;
 import org.ballerinalang.langserver.commons.workspace.WorkspaceManager;
 import org.eclipse.lsp4j.TextEdit;
@@ -83,8 +83,12 @@ public class OpenAPIService implements ExtendedLanguageServerService {
             OpenAPIClientGenerationResponse response = new OpenAPIClientGenerationResponse();
             try {
                 String command = "add";
-                List<String> arguments = List.of(req.openApiContractPath());
                 Map<String, Object> context = Map.of("projectPath", req.projectPath());
+                String[] arguments = new String[]{
+                        "--input", req.openApiContractPath(),
+                        "--module", req.module(),
+                        "--id", req.module()
+                };
 
                 ServiceLoader<CliToolService> services = ServiceLoader.load(CliToolService.class,
                         Thread.currentThread().getContextClassLoader());
@@ -95,7 +99,7 @@ public class OpenAPIService implements ExtendedLanguageServerService {
                         .findFirst()
                         .orElseThrow(() -> new RuntimeException("OpenAPI tool service not found"));
 
-                CommandResponse result = service.executeCommand(command, arguments.toArray(new String[0]), context);
+                CommandResponse result = service.executeCommand(command, arguments, context);
                 if (result.status().equals(Status.FAILURE)) {
                     throw new RuntimeException("Error generating client: " + result.errors());
                 }
@@ -105,7 +109,7 @@ public class OpenAPIService implements ExtendedLanguageServerService {
                 for (Map.Entry<String, List<LSPTextEdit>> entry : stringListMap.entrySet()) {
                     Path path = Path.of(entry.getKey());
                     List<TextEdit> edits = entry.getValue().stream()
-                            .map(CommonUtil::toTextEdit)
+                            .map(OpenAPIService::toTextEdit)
                             .toList();
                     textEdits.put(path, edits);
                 }
@@ -117,6 +121,10 @@ public class OpenAPIService implements ExtendedLanguageServerService {
             }
             return response;
         });
+    }
+
+    public static TextEdit toTextEdit(LSPTextEdit textEdit) {
+        return new TextEdit(PositionUtil.toRange(textEdit.range()), textEdit.text());
     }
 
     private static boolean isOpenApiToolService(CliToolService service) {
