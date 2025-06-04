@@ -47,6 +47,7 @@ import io.ballerina.compiler.syntax.tree.SyntaxTree;
 import io.ballerina.compiler.syntax.tree.Token;
 import io.ballerina.projects.Package;
 import io.ballerina.tools.diagnostics.Diagnostic;
+import io.ballerina.tools.text.LSPTextEdit;
 import io.ballerina.tools.text.LinePosition;
 import io.ballerina.tools.text.LineRange;
 import io.ballerina.tools.text.TextDocument;
@@ -805,5 +806,9 @@ public final class CommonUtil {
                         || node.kind() == SyntaxKind.SPECIFIC_FIELD
                         || node.kind() == SyntaxKind.COMPUTED_NAME_FIELD;
         return CommonUtil.getMatchingNode(nodeAtCursor, predicate);
+    }
+
+    public static TextEdit toTextEdit(LSPTextEdit textEdit) {
+        return new TextEdit(PositionUtil.toRange(textEdit.range()), textEdit.text());
     }
 }

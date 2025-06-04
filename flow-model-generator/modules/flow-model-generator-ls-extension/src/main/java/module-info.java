@@ -17,6 +17,7 @@
  */
 
 module io.ballerina.LSExtensions.FlowService {
+    uses io.ballerina.cli.service.CliToolService;
     requires io.ballerina.language.server.commons;
     requires io.ballerina.lang;
     requires org.eclipse.lsp4j.jsonrpc;
@@ -32,4 +33,5 @@ module io.ballerina.LSExtensions.FlowService {
     requires io.ballerina.formatter.core;
     requires io.ballerina.model.generator.commons;
     requires io.ballerina.toml;
+    requires io.ballerina.cli;
 }

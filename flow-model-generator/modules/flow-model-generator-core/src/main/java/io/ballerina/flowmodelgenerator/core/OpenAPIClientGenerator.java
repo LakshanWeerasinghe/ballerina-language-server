@@ -277,6 +277,6 @@ public class OpenAPIClientGenerator {
                 oAContractPath.toAbsolutePath().toString().replace("\\", "\\\\") + "\"" + LS;
     }
 
-    private record ClientSource(boolean isModuleExists, Map<Path, List<TextEdit>> textEditsMap) {
+    public record ClientSource(boolean isModuleExists, Map<Path, List<TextEdit>> textEditsMap) {
     }
 }

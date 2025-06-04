@@ -47,6 +47,7 @@ dependencies {
     implementation "org.ballerinalang:diagram-util:${ballerinaLangVersion}"
     implementation "org.ballerinalang:json-mapper:${ballerinaLangVersion}"
     implementation "org.ballerinalang:toml-parser:${ballerinaLangVersion}"
+    implementation "org.ballerinalang:ballerina-cli:${ballerinaLangVersion}"
     implementation "com.google.code.gson:gson:${gsonVersion}"
 
     testImplementation "org.testng:testng:${testngVersion}"
