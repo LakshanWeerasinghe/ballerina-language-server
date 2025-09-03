@@ -100,7 +100,6 @@ public class Constants {
 
     public static final String TYPE_HTTP_SERVICE_CONFIG = "http:ServiceConfig";
 
-
     // protocol listeners
     public static final String HTTP_DEFAULT_LISTENER_EXPR = "http:getDefaultListener()";
     public static final String GRAPHQL_DEFAULT_LISTENER_EXPR = "new (listenTo = 8080)";
