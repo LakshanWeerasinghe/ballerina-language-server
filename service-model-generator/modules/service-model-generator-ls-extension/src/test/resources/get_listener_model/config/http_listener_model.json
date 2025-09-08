@@ -31,7 +31,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "port": {
           "metadata": {
@@ -57,7 +58,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "host": {
           "metadata": {
@@ -83,7 +85,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         },
         "http1Settings": {
           "metadata": {
@@ -109,7 +112,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         },
         "secureSocket": {
           "metadata": {
@@ -141,7 +145,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         },
         "httpVersion": {
           "metadata": {
@@ -167,7 +172,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         },
         "timeout": {
           "metadata": {
@@ -193,7 +199,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         },
         "server": {
           "metadata": {
@@ -225,7 +232,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         },
         "requestLimits": {
           "metadata": {
@@ -251,7 +259,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         },
         "gracefulStopTimeout": {
           "metadata": {
@@ -277,7 +286,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         },
         "socketConfig": {
           "metadata": {
@@ -303,7 +313,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         },
         "http2InitialWindowSize": {
           "metadata": {
@@ -329,7 +340,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         },
         "minIdleTimeInStaleState": {
           "metadata": {
@@ -355,7 +367,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         },
         "timeBetweenStaleEviction": {
           "metadata": {
@@ -381,7 +394,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         }
       }
     }

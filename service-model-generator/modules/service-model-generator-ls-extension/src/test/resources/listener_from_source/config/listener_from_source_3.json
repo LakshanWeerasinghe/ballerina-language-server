@@ -47,7 +47,8 @@
           "enabled": true,
           "editable": false,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "port": {
           "metadata": {
@@ -73,7 +74,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "config": {
           "metadata": {
@@ -99,7 +101,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         }
       },
       "codedata": {

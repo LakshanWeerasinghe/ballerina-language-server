@@ -40,7 +40,8 @@
         "enabled": true,
         "editable": false,
         "optional": false,
-        "advanced": false
+        "advanced": false,
+        "addNewButton": false
       }
     },
     "codedata": {
@@ -72,7 +73,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "name": {
           "metadata": {
@@ -97,7 +99,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "parameters": [
           {
@@ -116,7 +119,8 @@
               "enabled": true,
               "editable": true,
               "optional": false,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "name": {
               "metadata": {
@@ -128,7 +132,8 @@
               "enabled": true,
               "editable": true,
               "optional": false,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "defaultValue": {
               "metadata": {
@@ -139,7 +144,8 @@
               "enabled": true,
               "editable": true,
               "optional": true,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "enabled": true,
             "editable": true,
@@ -159,7 +165,8 @@
               "enabled": true,
               "editable": true,
               "optional": false,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "name": {
               "metadata": {
@@ -170,7 +177,8 @@
               "enabled": true,
               "editable": true,
               "optional": false,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "defaultValue": {
               "metadata": {
@@ -181,7 +189,8 @@
               "enabled": true,
               "editable": true,
               "optional": true,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "enabled": true,
             "editable": true,
@@ -201,7 +210,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "enabled": true,
         "optional": false,
@@ -243,7 +253,8 @@
             "enabled": false,
             "editable": true,
             "optional": true,
-            "advanced": true
+            "advanced": true,
+            "addNewButton": false
           }
         }
       },
@@ -263,7 +274,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "name": {
           "metadata": {
@@ -288,7 +300,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "parameters": [],
         "schema": {
@@ -302,7 +315,8 @@
               "enabled": true,
               "editable": true,
               "optional": false,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "name": {
               "metadata": {
@@ -313,7 +327,8 @@
               "enabled": true,
               "editable": true,
               "optional": false,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "defaultValue": {
               "metadata": {
@@ -324,7 +339,8 @@
               "enabled": true,
               "editable": true,
               "optional": true,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "enabled": true,
             "editable": true,
@@ -344,7 +360,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "enabled": true,
         "optional": false,
@@ -386,7 +403,8 @@
             "enabled": false,
             "editable": true,
             "optional": true,
-            "advanced": true
+            "advanced": true,
+            "addNewButton": false
           }
         }
       },
@@ -405,7 +423,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "name": {
           "metadata": {
@@ -430,7 +449,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "parameters": [
           {
@@ -449,7 +469,8 @@
               "enabled": true,
               "editable": true,
               "optional": false,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "name": {
               "metadata": {
@@ -461,7 +482,8 @@
               "enabled": true,
               "editable": true,
               "optional": false,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "defaultValue": {
               "metadata": {
@@ -472,7 +494,8 @@
               "enabled": true,
               "editable": true,
               "optional": true,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "enabled": true,
             "editable": true,
@@ -492,7 +515,8 @@
               "enabled": true,
               "editable": true,
               "optional": false,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "name": {
               "metadata": {
@@ -503,7 +527,8 @@
               "enabled": true,
               "editable": true,
               "optional": false,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "defaultValue": {
               "metadata": {
@@ -514,7 +539,8 @@
               "enabled": true,
               "editable": true,
               "optional": true,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             "enabled": true,
             "editable": true,
@@ -533,7 +559,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "enabled": true,
         "optional": false,
@@ -575,7 +602,8 @@
             "enabled": false,
             "editable": true,
             "optional": true,
-            "advanced": true
+            "advanced": true,
+            "addNewButton": false
           }
         }
       }
@@ -607,7 +635,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "name": {
           "metadata": {
@@ -632,7 +661,8 @@
           "enabled": true,
           "editable": false,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "defaultValue": {
           "metadata": {
@@ -643,7 +673,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "enabled": true,
         "editable": false,
@@ -677,7 +708,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "name": {
           "metadata": {
@@ -702,7 +734,8 @@
           "enabled": true,
           "editable": false,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "defaultValue": {
           "metadata": {
@@ -713,7 +746,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "enabled": true,
         "editable": false,
@@ -747,7 +781,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "name": {
           "metadata": {
@@ -772,7 +807,8 @@
           "enabled": true,
           "editable": false,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "defaultValue": {
           "metadata": {
@@ -784,7 +820,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "enabled": true,
         "editable": false,

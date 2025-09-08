@@ -33,9 +33,10 @@
             "(+) Create and use the default HTTP listener (port: 9090)"
           ],
           "enabled": true,
-          "editable": false,
+          "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": true
         },
         "designApproach": {
           "metadata": {
@@ -70,7 +71,8 @@
                   "enabled": true,
                   "editable": true,
                   "optional": false,
-                  "advanced": false
+                  "advanced": false,
+                  "addNewButton": false
                 },
                 "annotServiceConfig": {
                   "metadata": {
@@ -96,13 +98,15 @@
                   "enabled": true,
                   "editable": true,
                   "optional": true,
-                  "advanced": true
+                  "advanced": true,
+                  "addNewButton": false
                 }
               },
               "enabled": true,
               "editable": true,
               "optional": false,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             },
             {
               "metadata": {
@@ -128,7 +132,8 @@
                   "enabled": true,
                   "editable": true,
                   "optional": true,
-                  "advanced": false
+                  "advanced": false,
+                  "addNewButton": false
                 },
                 "serviceTypeName": {
                   "metadata": {
@@ -145,19 +150,22 @@
                   "enabled": true,
                   "editable": true,
                   "optional": false,
-                  "advanced": false
+                  "advanced": false,
+                  "addNewButton": false
                 }
               },
               "enabled": false,
               "editable": true,
               "optional": false,
-              "advanced": false
+              "advanced": false,
+              "addNewButton": false
             }
           ],
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         }
       },
       "functions": [
@@ -188,7 +196,8 @@
             "enabled": true,
             "editable": true,
             "optional": false,
-            "advanced": false
+            "advanced": false,
+            "addNewButton": false
           },
           "name": {
             "metadata": {
@@ -202,7 +211,8 @@
             "enabled": true,
             "editable": false,
             "optional": false,
-            "advanced": false
+            "advanced": false,
+            "addNewButton": false
           },
           "parameters": [
             {
@@ -219,7 +229,8 @@
                 "enabled": true,
                 "editable": false,
                 "optional": false,
-                "advanced": false
+                "advanced": false,
+                "addNewButton": false
               },
               "name": {
                 "placeholder": "request",
@@ -229,7 +240,8 @@
                 "enabled": true,
                 "editable": true,
                 "optional": false,
-                "advanced": false
+                "advanced": false,
+                "addNewButton": false
               },
               "enabled": false,
               "editable": true,
@@ -251,7 +263,8 @@
                 "enabled": true,
                 "editable": false,
                 "optional": false,
-                "advanced": false
+                "advanced": false,
+                "addNewButton": false
               },
               "name": {
                 "placeholder": "request",
@@ -261,7 +274,8 @@
                 "enabled": true,
                 "editable": true,
                 "optional": false,
-                "advanced": false
+                "advanced": false,
+                "addNewButton": false
               },
               "enabled": false,
               "editable": true,
@@ -283,7 +297,8 @@
                 "enabled": true,
                 "editable": false,
                 "optional": false,
-                "advanced": false
+                "advanced": false,
+                "addNewButton": false
               },
               "name": {
                 "placeholder": "request",
@@ -293,7 +308,8 @@
                 "enabled": true,
                 "editable": true,
                 "optional": false,
-                "advanced": false
+                "advanced": false,
+                "addNewButton": false
               },
               "enabled": false,
               "editable": true,
@@ -317,7 +333,8 @@
                 "enabled": true,
                 "editable": true,
                 "optional": false,
-                "advanced": false
+                "advanced": false,
+                "addNewButton": false
               },
               "name": {
                 "placeholder": "",
@@ -327,7 +344,8 @@
                 "enabled": true,
                 "editable": true,
                 "optional": false,
-                "advanced": false
+                "advanced": false,
+                "addNewButton": false
               },
               "enabled": false,
               "editable": true,
@@ -350,7 +368,8 @@
                 "enabled": true,
                 "editable": true,
                 "optional": false,
-                "advanced": false
+                "advanced": false,
+                "addNewButton": false
               },
               "name": {
                 "placeholder": "",
@@ -360,7 +379,8 @@
                 "enabled": true,
                 "editable": true,
                 "optional": false,
-                "advanced": false
+                "advanced": false,
+                "addNewButton": false
               },
               "enabled": false,
               "editable": true,
@@ -383,7 +403,8 @@
                 "enabled": true,
                 "editable": true,
                 "optional": false,
-                "advanced": false
+                "advanced": false,
+                "addNewButton": false
               },
               "name": {
                 "placeholder": "name",
@@ -393,7 +414,8 @@
                 "enabled": true,
                 "editable": true,
                 "optional": false,
-                "advanced": false
+                "advanced": false,
+                "addNewButton": false
               },
               "enabled": false,
               "editable": true,
@@ -430,7 +452,8 @@
                   "enabled": true,
                   "editable": false,
                   "optional": false,
-                  "advanced": false
+                  "advanced": false,
+                  "addNewButton": false
                 },
                 "body": {
                   "metadata": {
@@ -444,7 +467,8 @@
                   "enabled": true,
                   "editable": false,
                   "optional": true,
-                  "advanced": false
+                  "advanced": false,
+                  "addNewButton": false
                 },
                 "enabled": true,
                 "editable": false,
@@ -476,7 +500,8 @@
                   "enabled": true,
                   "editable": false,
                   "optional": false,
-                  "advanced": false
+                  "advanced": false,
+                  "addNewButton": false
                 },
                 "body": {
                   "metadata": {
@@ -490,7 +515,8 @@
                   "enabled": true,
                   "editable": false,
                   "optional": true,
-                  "advanced": false
+                  "advanced": false,
+                  "addNewButton": false
                 },
                 "enabled": true,
                 "editable": false,
@@ -524,7 +550,8 @@
                   "enabled": true,
                   "editable": false,
                   "optional": false,
-                  "advanced": false
+                  "advanced": false,
+                  "addNewButton": false
                 },
                 "body": {
                   "metadata": {
@@ -536,7 +563,8 @@
                   "enabled": true,
                   "editable": true,
                   "optional": true,
-                  "advanced": false
+                  "advanced": false,
+                  "addNewButton": false
                 },
                 "name": {
                   "metadata": {
@@ -548,7 +576,8 @@
                   "enabled": true,
                   "editable": true,
                   "optional": true,
-                  "advanced": false
+                  "advanced": false,
+                  "addNewButton": false
                 },
                 "type": {
                   "metadata": {
@@ -560,7 +589,8 @@
                   "enabled": true,
                   "editable": true,
                   "optional": false,
-                  "advanced": false
+                  "advanced": false,
+                  "addNewButton": false
                 },
                 "headers": {
                   "metadata": {
@@ -572,7 +602,8 @@
                   "enabled": true,
                   "editable": true,
                   "optional": true,
-                  "advanced": false
+                  "advanced": false,
+                  "addNewButton": false
                 },
                 "enabled": true,
                 "editable": false,
@@ -592,7 +623,8 @@
             "enabled": true,
             "editable": true,
             "optional": true,
-            "advanced": false
+            "advanced": false,
+            "addNewButton": false
           },
           "enabled": true,
           "optional": false,

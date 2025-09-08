@@ -37,7 +37,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": true
         },
         "serviceType": {
           "metadata": {
@@ -58,7 +59,8 @@
           "enabled": false,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "basePath": {
           "metadata": {
@@ -76,7 +78,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "annotServiceConfig": {
           "metadata": {
@@ -103,7 +106,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": true
+          "advanced": true,
+          "addNewButton": false
         }
       },
       "functions": []

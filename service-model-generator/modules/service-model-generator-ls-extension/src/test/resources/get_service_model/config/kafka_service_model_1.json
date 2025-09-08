@@ -37,7 +37,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": true
         },
         "serviceType": {
           "metadata": {
@@ -58,7 +59,8 @@
           "enabled": false,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         }
       },
       "functions": []

@@ -44,9 +44,10 @@
           "new http:Listener(port = 8080)"
         ],
         "enabled": true,
-        "editable": false,
+        "editable": true,
         "optional": false,
-        "advanced": false
+        "advanced": false,
+        "addNewButton": true
       },
       "basePath": {
         "metadata": {
@@ -63,7 +64,8 @@
         "enabled": true,
         "editable": true,
         "optional": false,
-        "advanced": false
+        "advanced": false,
+        "addNewButton": false
       },
       "annotServiceConfig": {
         "metadata": {
@@ -89,7 +91,8 @@
         "enabled": true,
         "editable": true,
         "optional": true,
-        "advanced": true
+        "advanced": true,
+        "addNewButton": false
       }
     },
     "codedata": {

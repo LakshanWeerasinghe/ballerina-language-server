@@ -30,7 +30,8 @@
       "enabled": true,
       "editable": true,
       "optional": false,
-      "advanced": false
+      "advanced": false,
+      "addNewButton": false
     },
     "parameters": [],
     "returnType": {
@@ -43,7 +44,8 @@
       "enabled": true,
       "editable": true,
       "optional": true,
-      "advanced": false
+      "advanced": false,
+      "addNewButton": false
     },
     "enabled": true,
     "optional": false,

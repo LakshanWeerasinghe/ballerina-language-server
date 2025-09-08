@@ -29,7 +29,8 @@
       "enabled": true,
       "editable": true,
       "optional": false,
-      "advanced": false
+      "advanced": false,
+      "addNewButton": false
     },
     "name": {
       "metadata": {
@@ -41,7 +42,8 @@
       "enabled": true,
       "editable": true,
       "optional": false,
-      "advanced": false
+      "advanced": false,
+      "addNewButton": false
     },
     "parameters": [
       {
@@ -60,7 +62,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "name": {
           "metadata": {
@@ -72,7 +75,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "defaultValue": {
           "metadata": {
@@ -83,7 +87,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "enabled": true,
         "editable": true,
@@ -103,7 +108,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "name": {
           "metadata": {
@@ -114,7 +120,8 @@
           "enabled": true,
           "editable": true,
           "optional": false,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "defaultValue": {
           "metadata": {
@@ -125,7 +132,8 @@
           "enabled": true,
           "editable": true,
           "optional": true,
-          "advanced": false
+          "advanced": false,
+          "addNewButton": false
         },
         "enabled": true,
         "editable": true,
@@ -145,7 +153,8 @@
       "enabled": true,
       "editable": true,
       "optional": true,
-      "advanced": false
+      "advanced": false,
+      "addNewButton": false
     },
     "enabled": true,
     "optional": false,
