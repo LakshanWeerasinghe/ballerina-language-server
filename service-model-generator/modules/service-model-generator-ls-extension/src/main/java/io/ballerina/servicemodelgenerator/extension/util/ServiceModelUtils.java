@@ -383,7 +383,8 @@ public class ServiceModelUtils {
                 .optional(false)
                 .setAdvanced(false)
                 .enabled(true)
-                .editable(true);
+                .editable(true)
+                .addNewButton(true);
 
         return valueBuilder.build();
     }

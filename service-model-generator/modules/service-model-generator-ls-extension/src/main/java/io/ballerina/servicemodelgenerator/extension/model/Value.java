@@ -48,6 +48,7 @@ public class Value {
     private boolean editable;
     private boolean optional;
     private boolean advanced;
+    private boolean addNewButton;
 
     public Value(Value value) {
         this.metadata = value.metadata;
@@ -66,12 +67,13 @@ public class Value {
         this.choices = value.choices;
         this.typeMembers = value.typeMembers;
         this.imports = value.imports;
+        this.addNewButton = value.addNewButton;
     }
 
     public Value(MetaData metadata, boolean enabled, boolean editable, Object value, List<Object> values,
                  String valueType, String valueTypeConstraint, String placeholder, boolean optional,
-                 boolean advanced, Map<String, Value> properties, List<Object> items, Codedata codedata,
-                 List<PropertyTypeMemberInfo> typeMembers, Map<String, String> imports) {
+                 boolean advanced, boolean addNewButton, Map<String, Value> properties, List<Object> items,
+                 Codedata codedata, List<PropertyTypeMemberInfo> typeMembers, Map<String, String> imports) {
         this.metadata = metadata;
         this.enabled = enabled;
         this.editable = editable;
@@ -87,6 +89,7 @@ public class Value {
         this.codedata = codedata;
         this.typeMembers = typeMembers;
         this.imports = imports;
+        this.addNewButton = addNewButton;
     }
 
     public MetaData getMetadata() {
@@ -277,6 +280,7 @@ public class Value {
         private boolean editable = false;
         private boolean optional = false;
         private boolean advanced = false;
+        private boolean addNewButton = false;
 
         public ValueBuilder metadata(String label, String description) {
             this.metadata = new MetaData(label, description);
@@ -372,9 +376,14 @@ public class Value {
             return this;
         }
 
+        public ValueBuilder addNewButton(boolean addNewButton) {
+            this.addNewButton = addNewButton;
+            return this;
+        }
+
         public Value build() {
             return new Value(metadata, enabled, editable, value, values, valueType, valueTypeConstraint,
-                    placeholder, optional, advanced, properties, items, codedata, typeMembers, imports);
+                    placeholder, optional, advanced, addNewButton, properties, items, codedata, typeMembers, imports);
         }
     }
 }

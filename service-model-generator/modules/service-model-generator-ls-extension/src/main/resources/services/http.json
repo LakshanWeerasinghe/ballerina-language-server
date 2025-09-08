@@ -24,7 +24,7 @@
         "type": "LISTENER"
       },
       "enabled": true,
-      "editable": false,
+      "editable": true,
       "value": "",
       "values": [],
       "valueType": "MULTIPLE_SELECT",
