@@ -61,6 +61,16 @@
     ]
   },
   "7": {
+    "name": "trigger.identityserver",
+    "orgName": "ballerinax",
+    "packageName": "trigger.identityserver",
+    "keywords": [
+      "identityserver",
+      "identity server",
+      "is"
+    ]
+  },
+  "8": {
     "name": "trigger.github",
     "orgName": "ballerinax",
     "packageName": "trigger.github",
@@ -69,7 +79,7 @@
       "event"
     ]
   },
-  "8": {
+  "9": {
     "name": "ftp",
     "orgName": "ballerina",
     "packageName": "ftp",
@@ -81,7 +91,7 @@
       "event"
     ]
   },
-  "9": {
+  "10": {
     "name": "file",
     "orgName": "ballerina",
     "packageName": "file",
