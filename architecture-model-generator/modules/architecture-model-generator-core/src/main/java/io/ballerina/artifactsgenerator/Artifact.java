@@ -89,7 +89,8 @@ public record Artifact(String id, LineRange location, String type, String name, 
             Map.entry("salesforce", "Salesforce Event Handler"),
             Map.entry("github", "GitHub Event Handler"),
             Map.entry("twilio", "Twilio Event Handler"),
-            Map.entry("ai", "AI Agent Services")
+            Map.entry("ai", "AI Agent Services"),
+            Map.entry("identityserver", "WSO2 Identity Server Event Handler")
     );
 
     public static String getCategory(String type) {
