@@ -989,6 +989,18 @@ public class FormBuilder<T> extends FacetedBuilder<T> {
         return this;
     }
 
+    public FormBuilder<T> view(Map<String, Object> value) {
+        propertyBuilder
+                .metadata()
+                .label(DataMapperBuilder.VIEW_LABEL)
+                .description(DataMapperBuilder.VIEW_DOC)
+                .stepOut()
+                .value(value)
+                .type(Property.ValueType.VIEW);
+        addProperty(DataMapperBuilder.VIEW_KEY);
+        return this;
+    }
+
     public FormBuilder<T> collection(Node expressionNode) {
         propertyBuilder
                 .metadata()

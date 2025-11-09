@@ -165,6 +165,7 @@ import io.ballerina.tools.text.LinePosition;
 import io.ballerina.tools.text.LineRange;
 import io.ballerina.tools.text.TextDocument;
 import org.ballerinalang.langserver.common.utils.CommonUtil;
+import org.ballerinalang.langserver.common.utils.PathUtil;
 import org.ballerinalang.langserver.commons.workspace.WorkspaceManager;
 
 import java.nio.file.Path;
@@ -1876,6 +1877,22 @@ public class CodeAnalyzer extends NodeVisitor {
                     .flatMap(location -> CommonUtil.findNode(functionSymbol,
                             CommonUtils.getDocument(project, location).syntaxTree()))
                     .ifPresent(node -> nodeBuilder.properties().view(node.lineRange()));
+        } else {
+            Optional<Path> filePathForSymbol = PathUtil.getFilePathForSymbol(functionSymbol, project, null);
+            if (filePathForSymbol.isPresent()) {
+                Location location = functionSymbol.getLocation().get();
+                LineRange lineRange = LineRange.from(
+                        location.lineRange().fileName(),
+                        LinePosition.from(location.lineRange().startLine().line(),
+                                location.lineRange().startLine().offset()),
+                        LinePosition.from(location.lineRange().endLine().line(),
+                                location.lineRange().endLine().offset())
+                );
+                Map<String, Object> value = new HashMap<>();
+                value.put("rootPath", filePathForSymbol.get().toString());
+                value.put("lineRange", lineRange);
+                nodeBuilder.properties().view(value);
+            }
         }
 
         FunctionDataBuilder functionDataBuilder =
