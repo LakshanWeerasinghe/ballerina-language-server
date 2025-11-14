@@ -65,6 +65,7 @@ import io.ballerina.tools.text.LineRange;
 import io.ballerina.tools.text.TextDocument;
 import io.ballerina.tools.text.TextRange;
 import org.ballerinalang.langserver.common.utils.CommonUtil;
+import org.ballerinalang.langserver.common.utils.PathUtil;
 import org.ballerinalang.langserver.commons.BallerinaCompilerApi;
 import org.ballerinalang.langserver.commons.workspace.WorkspaceManager;
 import org.ballerinalang.util.diagnostic.DiagnosticErrorCode;
@@ -602,6 +603,57 @@ public class CommonUtils {
         Optional<ModuleID> moduleId = symbol.getModule().map(ModuleSymbol::id);
         return moduleId.filter(
                 moduleID -> isDefaultPackage(moduleID.orgName(), moduleID.moduleName(), moduleInfo)).isPresent();
+    }
+
+    /**
+     * Checks if the given symbol belongs to the workspace.
+     *
+     * @param symbol the symbol to check
+     * @param currentModuleInfo the module descriptor of the current module
+     * @param project the project
+     * @return true if the symbol belongs to the workspace, false otherwise
+     */
+    public static Optional<LineRange> lineRangeOfWorkspaceSymbol(Symbol symbol, ModuleInfo currentModuleInfo,
+                                                                 Project project) {
+        Optional<ModuleSymbol> module = symbol.getModule();
+        if (module.isEmpty()) {
+            return Optional.empty();
+        }
+
+        ModuleID moduleID = module.get().id();
+        if (!moduleID.orgName().equals(currentModuleInfo.org())) {
+            Optional<Path> filePathForSymbol = PathUtil.getFilePathForSymbol(symbol, project, null);
+            if (filePathForSymbol.isEmpty()) {
+                return Optional.empty();
+            }
+            LinePosition startPos = symbol.getLocation().get().lineRange().startLine();
+            LinePosition endPos = symbol.getLocation().get().lineRange().endLine();
+            LineRange lineRange = LineRange.from(filePathForSymbol.get().toString(), startPos, endPos);
+            return Optional.of(lineRange);
+        }
+
+        BallerinaCompilerApi ballerinaCompilerApi = BallerinaCompilerApi.getInstance();
+        Optional<Project> workspaceProject = ballerinaCompilerApi.getWorkspaceProject(project);
+        if (workspaceProject.isEmpty()) {
+            return Optional.empty();
+        }
+
+        Optional<Path> filePathForSymbol = PathUtil.getFilePathForSymbol(symbol, workspaceProject.get(), null);
+        if (filePathForSymbol.isEmpty()) {
+            return Optional.empty();
+        }
+
+        List<Project> workspaceProjects = ballerinaCompilerApi.getWorkspaceProjectsInOrder(workspaceProject.get());
+        for (Project wsProject : workspaceProjects) {
+            if (wsProject.sourceRoot().toString().equals(filePathForSymbol.get().getParent().toString())) {
+                LinePosition startPos = symbol.getLocation().get().lineRange().startLine();
+                LinePosition endPos = symbol.getLocation().get().lineRange().endLine();
+                LineRange lineRange = LineRange.from(filePathForSymbol.get().toString(), startPos, endPos);
+                return Optional.of(lineRange);
+            }
+        }
+
+        return Optional.empty();
     }
 
     /**

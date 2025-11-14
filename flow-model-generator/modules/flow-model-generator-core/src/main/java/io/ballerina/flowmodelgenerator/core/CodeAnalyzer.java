@@ -1820,12 +1820,8 @@ public class CodeAnalyzer extends NodeVisitor {
             startNode(NodeKind.METHOD_CALL, methodCallExpressionNode.parent());
         }
 
-        if (CommonUtils.isDefaultPackage(functionSymbol, moduleInfo)) {
-            functionSymbol.getLocation()
-                    .flatMap(location -> CommonUtil.findNode(functionSymbol,
-                            CommonUtils.getDocument(project, location).syntaxTree()))
-                    .ifPresent(node -> nodeBuilder.properties().view(node.lineRange()));
-        }
+        Optional<LineRange> lineRange = CommonUtils.lineRangeOfWorkspaceSymbol(functionSymbol, moduleInfo, project);
+        lineRange.ifPresent(range -> nodeBuilder.properties().view(range));
 
         FunctionDataBuilder functionDataBuilder =
                 new FunctionDataBuilder()
@@ -1876,12 +1872,8 @@ public class CodeAnalyzer extends NodeVisitor {
             startNode(NodeKind.FUNCTION_CALL, functionCallExpressionNode.parent());
         }
 
-        if (CommonUtils.isDefaultPackage(functionSymbol, moduleInfo)) {
-            functionSymbol.getLocation()
-                    .flatMap(location -> CommonUtil.findNode(functionSymbol,
-                            CommonUtils.getDocument(project, location).syntaxTree()))
-                    .ifPresent(node -> nodeBuilder.properties().view(node.lineRange()));
-        }
+        Optional<LineRange> lineRange = CommonUtils.lineRangeOfWorkspaceSymbol(functionSymbol, moduleInfo, project);
+        lineRange.ifPresent(range -> nodeBuilder.properties().view(range));
 
         FunctionDataBuilder functionDataBuilder =
                 new FunctionDataBuilder()

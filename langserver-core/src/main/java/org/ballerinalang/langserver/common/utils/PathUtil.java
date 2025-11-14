@@ -186,7 +186,9 @@ public final class PathUtil {
                     }
                 }
                 // Check for the cancellation after each of the module visit
-                context.checkCancelled();
+                if (context != null) {
+                    context.checkCancelled();
+                }
             }
         }
         return Optional.empty();
